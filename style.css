@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #27282c;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 140px;
+}
+
+.btn {
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    color: #ffffff;
+    border-color: transparent;
+}
+
+.btn::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 4px;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.btn:hover::after {
+    transform: scale(1);
+}
+
+.btn-1:hover::after {
+    box-shadow: 0 0 10px var(--color), 0 0 30px var(--color), 0 0 60px var(--color);
+}
+
+.btn-2:hover::after {
+    box-shadow: 0 0 10px var(--color), 0 0 30px var(--color), 0 0 60px var(--color);
+}
+
+.btn-3:hover::after {
+    box-shadow: 0 0 10px var(--color), 0 0 30px var(--color), 0 0 60px var(--color);
+}
+
+.btn-1 {
+    --color: #1e9bff;
+    color: var(--color);
+    text-shadow: 0px 0px 15px var(--color);
+}
+
+.btn-1::after {
+    background-color: var(--color);
+}
+
+.btn-2 {
+    --color: #ff1867;
+    color: var(--color);
+    text-shadow: 0px 0px 15px var(--color);
+}
+
+.btn-2::after {
+    background-color: var(--color);
+}
+
+.btn-3 {
+    --color: #6eff3e;
+    color: var(--color);
+    text-shadow: 0px 0px 15px var(--color);
+}
+
+.btn-3::after {
+    background-color: var(--color);
+}
+
+.btn span {
+    position: absolute;
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn span:nth-child(1),
+.btn span:nth-child(3) {
+    width: 40px;
+    height: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn span:nth-child(1) {
+    left: -60px;
+}
+
+.btn span:nth-child(3) {
+    right: -60px;
+}
+
+.btn span:nth-child(2),
+.btn span:nth-child(4) {
+    width: 4px;
+    height: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn span:nth-child(2) {
+    top: -60px;
+}
+
+.btn span:nth-child(4) {
+    bottom: -60px;
+}
+
+.btn-1 span {
+    background-color: var(--color);
+    box-shadow: 0 0 10px var(--color), 0 0 20px var(--color), 0 0 30px var(--color), 0 0 50px var(--color), 0 0 90px var(--color);
+}
+
+.btn-2 span {
+    background-color: var(--color);
+    box-shadow: 0 0 10px var(--color), 0 0 20px var(--color), 0 0 30px var(--color), 0 0 50px var(--color), 0 0 90px var(--color);
+}
+
+.btn-3 span {
+    background-color: var(--color);
+    box-shadow: 0 0 10px var(--color), 0 0 20px var(--color), 0 0 30px var(--color), 0 0 50px var(--color), 0 0 90px var(--color);
+}
+
+.btn:hover span {
+    opacity: 0;
+}
+
+.btn:hover span:nth-child(1),
+.btn:hover span:nth-child(3) {
+    transform: translateY(0);
+}
+
+.btn:hover span:nth-child(1) {
+    left: 0;
+}
+
+.btn:hover span:nth-child(3) {
+    right: 0;
+}
+
+.btn:hover span:nth-child(2),
+.btn:hover span:nth-child(4) {
+    transform: translateX(0);
+}
+
+.btn:hover span:nth-child(2) {
+    top: 0;
+}
+
+.btn:hover span:nth-child(4) {
+    bottom: 0;
+}
+
